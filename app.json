@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/classic/classic",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "simpleread",
+    "navigationBarTextStyle": "black"
+
+    
+    
+  },
+  "sitemapLocation": "sitemap.json"
+}

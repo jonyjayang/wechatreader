@@ -1,0 +1,11 @@
+<!--pages/classic/classic.wxml-->
+<view class="container">
+<view class="header" >
+    <v-episode class="episode"   index="{{classic.index}}" /> 
+    <view class="like-container" >
+        <v-like bind:like="onlike" like="{{likeStatus}}" count="{{likeCount}} "/>
+    </view>
+</view>
+<v-movie hidden="{{classic.type!=100}}"  img="{{classic.image}}" content="{{classic.content}}" />
+</view>
+
