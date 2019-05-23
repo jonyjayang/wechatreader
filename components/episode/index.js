@@ -23,8 +23,27 @@ Component({
    * 组件的初始数据
    */
   data: {
-    _index:""
+    _index:"",
+    year:'',
+    months: [
+      '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月',
+      '十二月'
+    ],
+  
 
+  },
+  //生命周期函数中添加当月时间
+  attached:function(){
+    let date = new Date()
+    let year = date.getFullYear()
+    let month = date.getMonth()
+    console.log(year)
+    console.log(month)
+
+    this.setData({
+      year,
+      month:this.data.months[month]
+    })
   },
 
   /**

@@ -14,6 +14,12 @@ Component({
    * 页面的初始数据
    */
   data: {
+    classic: null,
+    latest: true,
+    first: false,
+    likeCount: 0,
+    likeStatus: false
+
 
   },
 
@@ -34,8 +40,20 @@ Component({
       console.log(e)
       let behavior=e.detail.behavior;
       likeModel.like(behavior,this.data.classic.id,this.data.classic.type)
-
+    },
+    onNext(){
+      this._updateClassic('next')
+    },
+    onPrev(){
+      this._updateClassic('right')
+    },
+    _updateClassic: function (nextOrPrevious) {
+      classicModel.getClassic(index,nextOrPrevious,(res)=>{
+        
+      })
     }
+
+
 
   }
 
