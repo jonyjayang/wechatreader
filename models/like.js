@@ -12,5 +12,11 @@ class LikeModel extends Http{
         })
 
     }
+    getClassicLikeStatus(artID,category,sCallback){
+        this.request({
+            url:'classic/' + category + '/' + artID + '/favor',
+            success:sCallback
+        })
+    }
 }
 export {LikeModel}
